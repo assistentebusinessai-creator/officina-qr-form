@@ -86,6 +86,13 @@ Regole:
   "partita IVA 12345678901" → "cf_piva": "12345678901"
   "P IVA 12345678901" → "cf_piva": "12345678901"
   "codice fiscale RSSMRA80A01L219U" → "cf_piva": "RSSMRA80A01L219U"
+- "email": riconosci anche email dettate a voce.
+- Converti automaticamente "chiocciola" in "@", "punto" in ".", "trattino" in "-", "underscore" in "_".
+- Esempio: "mario punto rossi chiocciola gmail punto com" → "mario.rossi@gmail.com".
+
+- "cf_piva": riconosci anche quando la partita IVA viene detta lentamente cifra per cifra.
+- Esempio: "uno due tre quattro cinque sei sette otto nove zero uno" → "12345678901".
+- Se viene detta "partita IVA", "P IVA" o "IVA", estrai comunque il numero e inseriscilo in "cf_piva".
 - "modello" deve contenere modello/cilindrata se presenti.
 - Se nel modello compare un numero improbabile tipo 10002, 1002, 12000 vicino a parole come Panda, Punto, Fiesta, Golf, interpretalo come cilindrata 1.2 o 1200 solo se coerente con la frase.
 
